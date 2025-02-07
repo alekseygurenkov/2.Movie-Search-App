@@ -1,0 +1,213 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	background-color: #fff;
+	color: #000;
+}
+
+input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-family: 'Inter', sans-serif;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-family: 'Inter', sans-serif;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.movie-app {
+	padding: 100px 0;
+}
+
+.container {
+	max-width: 1180px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.movie-app__title {
+	margin-bottom: 50px;
+	font-weight: 700;
+	font-size: 40px;
+}
+.movie-app__title_back {
+	margin-bottom: 125px;
+}
+
+/* .movie-app__film {
+} */
+
+.preloaded {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-column: 1 / -1;
+	width: 100%;
+	height: 500px;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+/* ! Форма */
+.form {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 50px;
+}
+.form__label {
+	width: 500px;
+	height: 60px;
+}
+.form__input {
+	padding: 10px 0 10px 15px;
+	border: 1px solid #000;
+	font-weight: 400;
+	font-size: 32px;
+	transition: all 0.3s ease-in-out;
+}
+.form__input::placeholder {
+	transition: all 0.3s ease-in-out;
+}
+.form__btn {
+	width: 250px;
+	height: 60px;
+	padding: 0 20px;
+	background-color: #0094ff;
+	color: #fff;
+	font-weight: 400;
+	font-size: 32px;
+	transition: all 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+	.form__input:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+		border: 3px solid #000;
+	}
+	.form__btn:hover {
+		opacity: 0.5;
+	}
+}
+.form__input:focus::placeholder {
+	opacity: 0;
+}
+.form__btn:active {
+	transform: scale(0.9);
+}
+
+/* ! Список фильмов */
+.movie-app__list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 700px;
+}
+.item {
+	border-radius: 35px;
+	overflow: hidden;
+}
+.item-undefined {
+	font-weight: 700;
+	font-size: 40px;
+}
+.item__link {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-template-areas:
+		'img title'
+		'img year'
+		'img type';
+	gap: 10px 65px;
+	padding: 30px 40px;
+	transition: all 0.3s ease-in-out;
+}
+.item__img {
+	grid-area: img;
+	align-self: center;
+	justify-self: center;
+	width: 100px;
+	height: 150px;
+	object-fit: cover;
+}
+.item__title {
+	grid-area: title;
+	font-weight: 700;
+	font-size: 40px;
+}
+.item__year {
+	grid-area: year;
+	margin-bottom: 10px;
+	font-size: 25px;
+	color: #0094ff;
+}
+.item__type {
+	grid-area: type;
+	font-size: 30px;
+}
+@media (any-hover: hover) {
+	.item__link:hover {
+		background-color: #d9d9d9;
+	}
+}
+
+/* ! Страница с фильмом */
+/* .film {
+}
+.movie-app__film {
+} */
+.film {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	gap: 74px 90px;
+}
+.film__img {
+	width: 300px;
+	height: 373px;
+	object-fit: cover;
+}
+.film__box {
+	grid-column: 2 / 3;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.film__title {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 50px;
+	color: #000;
+}
+.film__desc {
+	font-size: 30px;
+}
+.film__desc-span {
+	color: #0094ff;
+}
+.film__about {
+	grid-column: 1 / 3;
+	justify-self: center;
+	max-width: 950px;
+	font-size: 30px;
+	color: #000;
+}
