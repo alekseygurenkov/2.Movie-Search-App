@@ -1,6 +1,6 @@
 // URL и API ключ для взаимодействия с OMDb API
 const URL = 'https://www.omdbapi.com';
-const OMDb_API_KEY = 'apikey=e810fced';
+const OMDb_API_KEY = 'apikey=e810fced'; // Сгенерить свой ключ на сервисе через e-mail регистрацию
 
 // Получение DOM-элементов
 const searchInputNode = document.getElementById('js-name-film');

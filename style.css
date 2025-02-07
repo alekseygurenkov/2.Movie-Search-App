@@ -172,10 +172,7 @@ a {
 }
 
 /* ! Страница с фильмом */
-/* .film {
-}
-.movie-app__film {
-} */
+
 .film {
 	display: grid;
 	grid-template-columns: 300px 1fr;
