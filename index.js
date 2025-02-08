@@ -45,7 +45,7 @@ const getFilmItem = (filmsArray) => {
     filmsArray.forEach(element => {
         elementListHTML += `
         <li class="movie-app__item item">
-            <a href="/SD.CODE__Movie-Search-App/film.html?i=${element.imdbID}" class="item__link">
+            <a href="./film.html?i=${element.imdbID}" class="item__link">
                 <img class="item__img" src="${element.Poster}" alt="${element.Title}"/>
                 <h2 class="item__title">${element.Title}</h2>
                 <p class="item__year">${element.Year}</p>
